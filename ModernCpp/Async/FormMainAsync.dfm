@@ -24,10 +24,6 @@ object frmMainSync: TfrmMainSync
     Lines.Strings = (
       'Feed:')
     TabOrder = 0
-    ExplicitLeft = 259
-    ExplicitTop = 3
-    ExplicitWidth = 185
-    ExplicitHeight = 195
   end
   object PanelHeader: TPanel
     AlignWithMargins = True
@@ -37,9 +33,6 @@ object frmMainSync: TfrmMainSync
     Height = 41
     Align = alTop
     TabOrder = 1
-    ExplicitLeft = 200
-    ExplicitTop = 240
-    ExplicitWidth = 185
     object ButtonGetAsyncFeed: TButton
       AlignWithMargins = True
       Left = 4
@@ -50,9 +43,6 @@ object frmMainSync: TfrmMainSync
       Caption = 'Get Async'
       TabOrder = 0
       OnClick = ButtonGetAsyncFeedClick
-      ExplicitLeft = 8
-      ExplicitTop = -16
-      ExplicitHeight = 57
     end
     object ButtonShowFeed: TButton
       AlignWithMargins = True
@@ -64,9 +54,6 @@ object frmMainSync: TfrmMainSync
       Caption = 'Show Feed'
       TabOrder = 1
       OnClick = ButtonShowFeedClick
-      ExplicitLeft = 8
-      ExplicitTop = -16
-      ExplicitHeight = 57
     end
   end
 end

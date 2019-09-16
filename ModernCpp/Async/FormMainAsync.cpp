@@ -44,25 +44,25 @@ void __fastcall TfrmMainSync::ButtonGetAsyncFeedClick(TObject *Sender)
 
 void __fastcall TfrmMainSync::ButtonShowFeedClick(TObject *Sender)
 {
-  Winapi::Webrt::_di_Syndication_ISyndicationFeed lres = nullptr;
-  FAsyncGet->GetResults(lres);
+  Winapi::Webrt::_di_Syndication_ISyndicationFeed resource = nullptr;
+  FAsyncGet->GetResults(resource);
 
   Winapi::Webrt::_di_IVector_1__Syndication_ISyndicationItem items = nullptr;
-  lres->get_Items(items);
+  resource->get_Items(items);
 
   Winapi::Webrt::_di_Syndication_ISyndicationText title = nullptr;
-  lres->get_Title(title);
+  resource->get_Title(title);
   HSTRING ltext;
   title->get_Text(ltext);
   System::UnicodeString text = HSTRINGToString(ltext);
   MemoFeed->Lines->Add(text);
 
   for(int i = 0; i < items->Size; i++) {
-	  Winapi::Webrt::_di_Syndication_ISyndicationItem litem = nullptr;
-	  items->GetAt(i, litem);
+	  Winapi::Webrt::_di_Syndication_ISyndicationItem feed_item = nullptr;
+	  items->GetAt(i, feed_item);
 
 	  Winapi::Webrt::_di_Syndication_ISyndicationText item_title = nullptr;
-	  litem->get_Title(item_title);
+	  feed_item->get_Title(item_title);
 	  HSTRING ltext;
 	  item_title->get_Text(ltext);
 	  System::UnicodeString text = HSTRINGToString(ltext);
